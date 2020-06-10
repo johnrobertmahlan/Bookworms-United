@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const bookstoreSchema = new mongoose.Schema({
     name: String,
     address: String,
-    picture: String,
-    genres: [],
+    //picture: String,
+    genres: String,
     website: String,
     //reviews: [reviewSchema]
 })

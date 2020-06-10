@@ -22,3 +22,7 @@ body {
 a:visited {
     color: white;
 }
+
+#add-bookstore {
+    background-color: white;
+}

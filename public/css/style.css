@@ -1,14 +1,15 @@
 nav {
-    background-color: black;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    height: 300px;
     color: white;
     font-size: 30px;
 }
 
 body {
-    background-color: black;
+    background-image: url("../images/blur-book-stack-books-bookshelves-590493.jpg");
+    background-size: cover;
 }
 
 #greeting {

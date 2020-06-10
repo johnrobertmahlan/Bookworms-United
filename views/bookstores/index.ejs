@@ -1,6 +1,14 @@
 <%- include('../partials/header') %>
 
-
+<div id="bookstore-display">
+    <% bookstores.forEach(function(bookstore) { %> 
+        <ul>
+            <li><%= bookstore.name %></li>
+            <li><%= bookstore.address %></li>
+            <li><%= bookstore.website %></li>
+        </ul>
+    <% }); %>
+</div>
 
 
 <%- include('../partials/footer') %>

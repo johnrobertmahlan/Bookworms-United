@@ -1,0 +1,22 @@
+nav {
+    background-image: url("../images/books-old-book-knowledge-bookstore-34592.jpg");
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    color: white;
+    border: 2px solid white;
+    font-size: 75px;
+}
+
+body {
+    background-color: black;
+}
+
+#greeting {
+    margin: 0 auto;
+    width: 400px;
+    text-align: justify;
+    font-size: 35px;
+    color: white;
+}

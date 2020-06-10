@@ -15,6 +15,7 @@ const app = express();
 // Connect to DB
 require('./config/database');
 
+// Configure authentication
 require('./config/passport');
 
 // Mount Middleware

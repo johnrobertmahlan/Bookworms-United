@@ -3,7 +3,8 @@ const Bookstore = require('../models/bookstore');
 module.exports = {
     index,
     new: newBookstore,
-    create
+    create,
+    show
 }
 
 function index(req, res) {
@@ -23,8 +24,15 @@ function newBookstore(req, res) {
 
 function create(req, res) {
     const bookstore = new Bookstore(req.body);
+    console.log(req.body);
     bookstore.save(function(err) {
         if(err) return res.redirect('/bookstores/new');
         res.redirect('/bookstores');
     });
 };
+
+function show(req, res) {
+    Bookstore.findById(req.params.id, function(err, bookstore) {
+        res.render('bookstores/show', {user: req.user, bookstore});
+    })
+}

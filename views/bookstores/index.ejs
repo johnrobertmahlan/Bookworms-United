@@ -5,10 +5,16 @@
         <ul>
             <li><%= bookstore.name %></li>
             <li><%= bookstore.address %></li>
+            <li><%= bookstore.genres.join(", ") %></li>
             <li><%= bookstore.website %></li>
+            <li><a href="/bookstores/<%= bookstore._id %>">Learn More About this Bookstore</a></li>
         </ul>
     <% }); %>
 </div>
+<br />
+<a href="/">Go Home</a>
+<br />
+<a href="/bookstores/new">Know a great bookstore? Add it here!</a>
 
 
 <%- include('../partials/footer') %>

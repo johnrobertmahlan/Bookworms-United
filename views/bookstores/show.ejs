@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<div id="display-single-bookstore">
+    <ul>
+        <li><%= bookstore.name %></li>
+        <li><%= bookstore.address %></li>
+        <li><%= bookstore.genres.join(", ") %></li>
+        <li><%= bookstore.website %></li>
+    </ul>
+</div>
+
+<%- include('../partials/footer') %>

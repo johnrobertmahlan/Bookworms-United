@@ -1,12 +1,10 @@
 nav {
-    background-image: url("../images/books-old-book-knowledge-bookstore-34592.jpg");
+    background-color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
-    height: 200px;
     color: white;
-    border: 2px solid white;
-    font-size: 75px;
+    font-size: 30px;
 }
 
 body {
@@ -18,5 +16,9 @@ body {
     width: 400px;
     text-align: justify;
     font-size: 35px;
+    color: white;
+}
+
+a:visited {
     color: white;
 }

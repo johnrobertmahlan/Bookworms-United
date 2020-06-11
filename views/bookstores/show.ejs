@@ -10,25 +10,27 @@
 </div>
 <br />
 
-<h3>Write a Review!</h3>
-<form action="/bookstores/<%= bookstore._id %>/reviews" method="POST">
-    <fieldset>
-        <label>Share your thoughts:</label>
-        <br />
-        <textarea name="content"></textarea>
-        <br />
-        <label>On a scale of 1-5:</label>
-        <br />
-        <select name="rating">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <input type="submit" value="Post your Review!">
-    </fieldset>
-</form>
+<% if(user) { %>
+    <h3>Write a Review!</h3>
+    <form action="/bookstores/<%= bookstore._id %>/reviews" method="POST">
+        <fieldset>
+            <label>Share your thoughts:</label>
+            <br />
+            <textarea name="content"></textarea>
+            <br />
+            <label>On a scale of 1-5:</label>
+            <br />
+            <select name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <input type="submit" value="Post your Review!">
+        </fieldset>
+    </form>
+<% }; %>
 
 <% if(bookstore.reviews.length) { %>
     <ul>

@@ -30,6 +30,16 @@
     </fieldset>
 </form>
 
+<% if(bookstore.reviews.length) { %>
+    <ul>
+        <% bookstore.reviews.forEach(function(review) { %>
+            <li>
+                <%= review.content %><br /><br /><%= review.rating %>
+            </li>
+        <% }); %>
+    </ul>
+<% }; %>
+
 <a href="/bookstores">Return to Bookstores</a>
 <br />
 <a href="/">Return Home</a>

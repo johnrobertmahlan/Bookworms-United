@@ -18,6 +18,7 @@ const bookstoreSchema = new mongoose.Schema({
     //picture: String,
     genres: [String],
     website: String,
+    //reviews: [reviewSchema]
     reviews: [reviewSchema]
 })
 

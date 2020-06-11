@@ -5,8 +5,11 @@ const reviewSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, ref: "User"
     },
     content: String,
-    rating: Number
-    }, { timestamps: true }
+    rating: {
+        type: Number,
+        min: 1,
+        max: 5
+    }}, { timestamps: true }
 );
 
 const bookstoreSchema = new mongoose.Schema({

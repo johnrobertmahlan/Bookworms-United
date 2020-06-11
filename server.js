@@ -6,6 +6,7 @@ const passport = require('passport');
 const port = 3000;
 const indexRouter = require('./routes/index');
 const bookstoresRouter = require('./routes/bookstores');
+const reviewsRouter = require('./routes/reviews');
 
 require('dotenv').config();
 
@@ -34,6 +35,7 @@ app.use(passport.session());
 // Mount Routes
 app.use('/', indexRouter);
 app.use('/bookstores', bookstoresRouter);
+app.use('/', reviewsRouter);
 
 // Tell App to Listen
 app.listen(port, function() {

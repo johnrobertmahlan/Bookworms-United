@@ -4,15 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='/css/style.css'/>
   <title>Bookworms United</title>
 </head>
 <body>
   <nav>
+    <h1 id="site-name">Bookworms United</h1>
     <% if(user) { %> 
-        <a href="/logout">Log Out</a>    
+        <a href="/logout"><span class="material-icons">
+          eject
+          </span></a>    
     <% } else { %>
-        <a href="/auth/google">Log In</a>
+      <a href="/auth/google"><span class="material-icons">
+        login
+        </span></a>
     <% } %>
   </nav>
   <main> 

@@ -38,6 +38,11 @@
             <li>
                 <%= review.content %><br /><br /><%= review.rating %>
             </li>
+            <% if(review.createdBy.equals(user && user._id)) { %>
+                <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete Review</button>
+                </form>
+            <% }; %>
         <% }); %>
     </ul>
 <% }; %>

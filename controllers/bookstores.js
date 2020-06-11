@@ -33,6 +33,7 @@ function create(req, res) {
 
 function show(req, res) {
     Bookstore.findById(req.params.id, function(err, bookstore) {
+        console.log(bookstore);
         res.render('bookstores/show', {user: req.user, bookstore});
     })
 }

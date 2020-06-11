@@ -33,14 +33,16 @@ a:visited {
     color: white;
 }
 
-#add-bookstore {
-    background-color: white;
+ul {
+    list-style-type: none;
 }
 
 #bookstore-display {
-    background-color: white;
-}
-
-#display-single-bookstore {
-    background-color: white;
-}
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    width: 400px;
+    border: 3px solid black;
+    border-radius: 20px;
+    color: white;
+};

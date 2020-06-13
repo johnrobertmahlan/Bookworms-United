@@ -7,6 +7,12 @@ router.get('/', function(req, res) {
     });
 });
 
+router.get('/about', function(req, res) {
+    res.render('about', {
+        user: req.user
+    });
+});
+
 router.get('/auth/google', passport.authenticate(
     'google',
     { scope: ['profile', 'email']}

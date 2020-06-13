@@ -11,7 +11,6 @@ function userReview(req, res) {
     Bookstore.findById(req.params.id, function(err, bookstore) {
         req.body.createdBy = req.user._id;
         bookstore.reviews.push(req.body);
-        console.log(req.body);
         bookstore.save(function(err) {
             res.redirect('/bookstores');
         });

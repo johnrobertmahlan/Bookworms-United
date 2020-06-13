@@ -29,6 +29,18 @@ body {
     color: white;
 }
 
+#about {
+    margin: 0 auto;
+    width: 400px;
+    text-align: justify;
+    font-size: 35px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
 a:visited {
     color: white;
 }

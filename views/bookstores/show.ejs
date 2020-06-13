@@ -42,6 +42,9 @@
                 <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
                     <button type="submit">Delete Review</button>
                 </form>
+                <form action="/reviews/<%= review._id %>" method="GET">
+                    <button type="submit">Edit Review</button>
+                </form>
             <% }; %>
         <% }); %>
     </ul>

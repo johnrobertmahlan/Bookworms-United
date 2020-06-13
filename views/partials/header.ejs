@@ -11,15 +11,13 @@
 </head>
 <body>
   <nav>
-    <h1 id="site-name">Bookworms United</h1>
+    <a href="/"><h1 id="site-name">Bookworms United</h1></a>
+    <a href="/about">About</a>
+    <a href="/bookstores">Bookstores</a>
     <% if(user) { %> 
-        <a href="/logout"><span class="material-icons">
-          eject
-          </span></a>    
+        <a href="/logout">Log Out</a>    
     <% } else { %>
-      <a href="/auth/google"><span class="material-icons">
-        login
-        </span></a>
+      <a href="/auth/google">Log In</a>
     <% } %>
   </nav>
   <main> 

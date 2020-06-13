@@ -18,7 +18,7 @@
                     <td><%= bookstore.address %></td>
                     <td><%= bookstore.genres.join(", ") %></td>
                     <td><a href="<%= bookstore.website %>"><%= bookstore.website %></a></td>
-                    <td><form action="/bookstores/<%= bookstore._id %>" method="GET"><button type="submit" value="Get More Information"></button></form></td>
+                    <td><form action="/bookstores/<%= bookstore._id %>" method="GET"><button type="submit">Details</button></form></td>
                 </tr>
             <% }); %>
         </tbody>

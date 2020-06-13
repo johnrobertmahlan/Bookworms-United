@@ -7,6 +7,10 @@ nav {
     font-size: 30px;
 }
 
+h1 {
+    text-shadow: 2px 2px gray;
+}
+
 nav>a {
     text-decoration: none;
 }
@@ -37,6 +41,10 @@ body {
     color: white;
 }
 
+#add-bookstore {
+    margin: 0 auto;
+}
+
 a:visited {
     color: white;
 }
@@ -46,11 +54,27 @@ ul {
 }
 
 #bookstore-display {
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
     background-color: rgba(0,0,0,0.6);
-    width: 400px;
+    width: 700px;
     border: 3px solid black;
     border-radius: 20px;
     color: white;
 };
+
+table {
+    width: 600px;
+}
+
+th, td {
+    padding: 7px 10px 10px 10px;
+}
+
+th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 90%;
+    border-bottom: 2px solid black;
+    text-align: center;
+}

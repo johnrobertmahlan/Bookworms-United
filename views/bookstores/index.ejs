@@ -1,20 +1,33 @@
 <%- include('../partials/header') %>
 
 <div id="bookstore-display">
-    <% bookstores.forEach(function(bookstore) { %> 
-        <ul>
-            <li><%= bookstore.name %></li>
-            <li><%= bookstore.address %></li>
-            <li><%= bookstore.genres.join(", ") %></li>
-            <li><%= bookstore.website %></li>
-            <li><a href="/bookstores/<%= bookstore._id %>">Learn More About this Bookstore</a></li>
-        </ul>
-    <% }); %>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Popular Genres</th>
+                <th>Website</th>
+                <th>Learn More</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% bookstores.forEach(function(bookstore) { %>
+                <tr>
+                    <td><%= bookstore.name %></td>
+                    <td><%= bookstore.address %></td>
+                    <td><%= bookstore.genres.join(", ") %></td>
+                    <td><a href="<%= bookstore.website %>"><%= bookstore.website %></a></td>
+                    <td><form action="/bookstores/<%= bookstore._id %>" method="GET"><button type="submit" value="Get More Information"></button></form></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <form id="add-bookstore" action="/bookstores/new" method="GET">
+        <p>Found a great bookstore? <button type="submit">Add it here!</button></p>
+    </form>
 </div>
-<br />
-<a href="/">Go Home</a>
-<br />
-<a href="/bookstores/new">Know a great bookstore? Add it here!</a>
+
 
 
 <%- include('../partials/footer') %>

@@ -23,9 +23,11 @@
             <% }); %>
         </tbody>
     </table>
-    <form id="add-bookstore" action="/bookstores/new" method="GET">
-        <p>Found a great bookstore? <button type="submit">Add it here!</button></p>
-    </form>
+    <% if(user) { %>
+        <form id="add-bookstore" action="/bookstores/new" method="GET">
+            <p>Found a great bookstore? <button type="submit">Add it here!</button></p>
+        </form>
+    <% }; %>
 </div>
 
 

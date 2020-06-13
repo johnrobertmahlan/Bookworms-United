@@ -80,3 +80,11 @@ th {
     border-bottom: 2px solid black;
     text-align: center;
 }
+
+#new-bookstore {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#add-bookstore-form {
+    color: white;
+}

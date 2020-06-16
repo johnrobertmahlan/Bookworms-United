@@ -27,6 +27,8 @@ body {
     background-image: url("../images/blur-book-stack-books-bookshelves-590493.jpg");
     background-size: cover;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #site-name {
@@ -47,6 +49,10 @@ body {
     width: 600px;
     text-align: justify;
     font-size: 35px;
+    color: white;
+}
+
+a {
     color: white;
 }
 

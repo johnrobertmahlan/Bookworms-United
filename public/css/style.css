@@ -9,12 +9,14 @@ nav {
 
 main {
     margin-top: 100px;
-    display: flex;
+    flex-grow: 1;
+    /*display: flex;
     justify-content: center;
+    align-items: center;*/
 }
 
 h1 {
-    text-shadow: 2px 2px gray;
+    text-shadow: 2px 2px black;
 }
 
 nav>a {
@@ -24,6 +26,7 @@ nav>a {
 body {
     background-image: url("../images/blur-book-stack-books-bookshelves-590493.jpg");
     background-size: cover;
+    min-height: 100vh;
 }
 
 #site-name {
@@ -56,35 +59,63 @@ ul {
 }
 
 #bookstore-display {
-    /*margin: 100px 100px 100px 350px;*/
-    text-align: center;
-    background-color: rgba(0,0,0,0.6);
-    width: 700px;
-    border: 3px solid black;
-    border-radius: 20px;
+    margin: 0 auto;
+    width: 1000px;
     color: white;
+    background-color: rgba(0,0,0,0.4);
+    border: 0.5px solid black;
+    text-align: center;
 };
 
 table {
-    width: 600px;
+    width: 800px;
 }
 
 th, td {
-    padding: 7px 10px 10px 10px;
+    padding: 10px 15px 15px 15px;
+    text-align: center;
 }
 
 th {
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 90%;
+    letter-spacing: 0.2em;
     border-bottom: 2px solid black;
-    text-align: center;
 }
 
 #new-bookstore {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.4);
+    margin: 0 auto;
 }
 
 #add-bookstore-form {
     color: white;
+}
+
+#display-single-bookstore{
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: 0.5px solid black;
+    /*margin: 0 auto;*/
+    padding: 10px;
+    width: 50%;
+}
+
+button {
+    background-color: black;
+    color: white;
+    width: 150px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    width: 150px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    color: white;
+    font-size: 30px;
 }

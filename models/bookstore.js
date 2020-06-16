@@ -13,8 +13,14 @@ const reviewSchema = new mongoose.Schema({
 );
 
 const bookstoreSchema = new mongoose.Schema({
-    name: String,
-    address: String,
+    name: {
+        type: String,
+        required: true
+    },    
+    address: {
+        type: String,
+        required: true
+    },
     //picture: String,
     genres: [String],
     website: String,

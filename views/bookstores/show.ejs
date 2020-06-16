@@ -1,57 +1,58 @@
 <%- include('../partials/header') %>
 
 <div id="display-single-bookstore">
-    <ul>
-        <li><%= bookstore.name %></li>
-        <li><%= bookstore.address %></li>
-        <li><%= bookstore.genres.join(", ") %></li>
-        <li><%= bookstore.website %></li>
-    </ul>
-</div>
+    <h1><%= bookstore.name %></h1>
+    <p><strong>Address:</strong> <%= bookstore.address %></p>
+    <p><strong>Popular Genre(s):</strong> <%= bookstore.genres.join(", ") %></p>
+    <p><strong>Website:</strong> <a href="<%=bookstore.website%>"><%= bookstore.website %></a></p>
+    <br />
+    <% if(user) { %>
+        <h3>Been Here Before? Tell Us What You Thought!</h3>
+        <form action="/bookstores/<%= bookstore._id %>/reviews" method="POST">
+                <label>Share your thoughts:</label>
+                <br />
+                <textarea name="content" placeholder="So what'd you think?..." cols=45 rows=15></textarea>
+                <br />
+                <label>On a scale of 1-5:</label>
+                <br />
+                <select name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <input type="submit" value="Post your Review!">
+        </form>  
+    <% }; %>
+    
+    <aside>
+        <% if(bookstore.reviews.length) { %>
+            <h2>What Your Fellow Bookworms Had to Say About <%= bookstore.name %>:</h2>
+                <% bookstore.reviews.forEach(function(review) { %>
+                    <div>
+                        <h3>Review by <%= user.name%></h3>
+                        <p><%= review.content %></p>
+                        <p><%= review.rating %> Stars</p>
+                    </div>
+                    <% if(review.createdBy.equals(user && user._id)) { %>
+                        <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                            <button type="submit">Delete Review</button>
+                        </form>
+                        <br />
+                        <form action="/reviews/<%= review._id %>" method="GET">
+                            <button type="submit">Edit Review</button>
+                        </form>
+                    <% }; %>    
+                <% }); %>
+            </ul>    
+        <% } else { %>
+            <h3>Sorry, nobody has reviewed this bookstore yet. <a href="/auth/google">Log in</a> to be the first!</h3>
+        <% }; %>
+    </div>
+
+    </aside>
 <br />
 
-<% if(user) { %>
-    <h3>Write a Review!</h3>
-    <form action="/bookstores/<%= bookstore._id %>/reviews" method="POST">
-        <fieldset>
-            <label>Share your thoughts:</label>
-            <br />
-            <textarea name="content"></textarea>
-            <br />
-            <label>On a scale of 1-5:</label>
-            <br />
-            <select name="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-            <input type="submit" value="Post your Review!">
-        </fieldset>
-    </form>
-<% }; %>
-
-<% if(bookstore.reviews.length) { %>
-    <ul>
-        <% bookstore.reviews.forEach(function(review) { %>
-            <li>
-                <%= review.content %><br /><br /><%= review.rating %>
-            </li>
-            <% if(review.createdBy.equals(user && user._id)) { %>
-                <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
-                    <button type="submit">Delete Review</button>
-                </form>
-                <form action="/reviews/<%= review._id %>" method="GET">
-                    <button type="submit">Edit Review</button>
-                </form>
-            <% }; %>
-        <% }); %>
-    </ul>
-<% }; %>
-
-<a href="/bookstores">Return to Bookstores</a>
-<br />
-<a href="/">Return Home</a>
 
 <%- include('../partials/footer') %>

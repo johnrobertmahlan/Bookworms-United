@@ -25,34 +25,42 @@
                 <input type="submit" value="Post your Review!">
         </form>  
     <% }; %>
-    
-    <aside>
-        <% if(bookstore.reviews.length) { %>
-            <h2>What Your Fellow Bookworms Had to Say About <%= bookstore.name %>:</h2>
-                <% bookstore.reviews.forEach(function(review) { %>
-                    <div>
-                        <h3>Review by <%= user.name%></h3>
-                        <p><%= review.content %></p>
-                        <p><%= review.rating %> Stars</p>
-                    </div>
-                    <% if(review.createdBy.equals(user && user._id)) { %>
-                        <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
-                            <button type="submit">Delete Review</button>
-                        </form>
-                        <br />
-                        <form action="/reviews/<%= review._id %>" method="GET">
-                            <button type="submit">Edit Review</button>
-                        </form>
-                    <% }; %>    
-                <% }); %>
-            </ul>    
-        <% } else { %>
-            <h3>Sorry, nobody has reviewed this bookstore yet. <a href="/auth/google">Log in</a> to be the first!</h3>
-        <% }; %>
     </div>
-
+    
+    <aside id="reviews">
+            <% if(bookstore.reviews.length) { %>
+                <h2>What Your Fellow Bookworms Had to Say About <%= bookstore.name %>:</h2>
+                    <% bookstore.reviews.forEach(function(review, idx) { %>
+                        <div>
+                            <% if(user) { %> 
+                                <h3>Review by <%= user.name %></h3>
+                            <% } else { %>
+                                <h3>Review # <%= idx + 1 %></h3>
+                            <% }; %>
+                            <p><%= review.content %></p>
+                            <p><%= review.rating %> Stars</p>
+                        </div>
+                        <div>
+                        <% if(review.createdBy.equals(user && user._id)) { %>
+                            <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                                <button type="submit">Delete Review</button>
+                            </form>
+                            <br />
+                            <form action="/reviews/<%= review._id %>" method="GET">
+                                <button type="submit">Edit Review</button>
+                            </form>
+                        </div>
+                        <% }; %>    
+                    <% }); %>   
+            <% } else { %>
+                <% if(user) { %>
+                    <h3>Sorry, nobody has reviewed this bookstore yet. You could be the first!</h3>
+                <% } else { %>
+                    <h3>Sorry, nobody has reviewed this bookstore yet. <a href="/auth/google">Log in</a> to be the first!</h3>
+                <% }; %>
+            <% }; %>
     </aside>
-<br />
+
 
 
 <%- include('../partials/footer') %>

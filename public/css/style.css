@@ -122,6 +122,15 @@ th {
     color: white;
     border: 0.5px solid black;
     padding: 10px;
+    margin-bottom: 20px;
+}
+
+#update-review-form {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: 0.5px solid black;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 button {

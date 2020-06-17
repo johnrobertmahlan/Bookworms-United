@@ -1,5 +1,9 @@
 <%- include('../partials/header') %>
 
+<% if(error) { %>
+    <h2><%= error %></h2>
+<% }; %>
+
 <div id="display-single-bookstore">
     <h1><%= bookstore.name %></h1>
     <p><strong>Address:</strong> <%= bookstore.address %></p>
@@ -32,13 +36,13 @@
                 <h2>What Your Fellow Bookworms Had to Say About <%= bookstore.name %>:</h2>
                     <% bookstore.reviews.forEach(function(review, idx) { %>
                         <div>
+            
+                            <p><%= review.rating %> Star(s) - <%= review.content %> </p>
                             <% if(user) { %> 
-                                <h3>Review by <%= user.name %></h3>
+                                <p>- Review by <%= user.name %></p>
                             <% } else { %>
-                                <h3>Review # <%= idx + 1 %></h3>
+                                <p>- Review # <%= idx + 1 %></p>
                             <% }; %>
-                            <p><%= review.content %></p>
-                            <p><%= review.rating %> Stars</p>
                         </div>
                         <div>
                         <% if(review.createdBy.equals(user && user._id)) { %>

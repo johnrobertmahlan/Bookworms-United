@@ -1,9 +1,5 @@
 <%- include('../partials/header') %>
 
-<% if(error) { %>
-    <h2><%= error %></h2>
-<% }; %>
-
 <div id="display-single-bookstore">
     <h1><%= bookstore.name %></h1>
     <p><strong>Address:</strong> <%= bookstore.address %></p>
@@ -36,7 +32,6 @@
                 <h2>What Your Fellow Bookworms Had to Say About <%= bookstore.name %>:</h2>
                     <% bookstore.reviews.forEach(function(review, idx) { %>
                         <div>
-            
                             <p><%= review.rating %> Star(s) - <%= review.content %> </p>
                             <% if(user) { %> 
                                 <p>- Review by <%= user.name %></p>
@@ -46,6 +41,9 @@
                         </div>
                         <div>
                         <% if(review.createdBy.equals(user && user._id)) { %>
+                            <% if(error) { %>
+                                <h3><%= error %></h3>
+                            <% }; %>
                             <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
                                 <button type="submit">Delete Review</button>
                             </form>

@@ -20,6 +20,13 @@ h1 {
     text-shadow: 2px 2px black;
 }
 
+#homepage {
+    color: white;
+    font-size: 35px;
+    margin-top: 150px;
+    text-align: center;
+}
+
 nav>a {
     text-decoration: none;
 }

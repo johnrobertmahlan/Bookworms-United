@@ -4,7 +4,7 @@
     <h1><%= bookstore.name %></h1>
     <p><strong>Address:</strong> <%= bookstore.address %></p>
     <p><strong>Popular Genre(s):</strong> <%= bookstore.genres.join(", ") %></p>
-    <p><strong>Website:</strong> <a href="<%=bookstore.website%>"><%= bookstore.website %></a></p>
+    <p><strong>Website:</strong> <a href="<%= bookstore.website %>"><%= bookstore.name %></a></p>
     <br />
     <% if(user) { %>
         <h3>Been Here Before? Tell Us What You Thought!</h3>

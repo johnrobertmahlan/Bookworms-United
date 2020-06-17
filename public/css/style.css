@@ -51,6 +51,9 @@ body {
     text-align: justify;
     font-size: 35px;
     color: white;
+    background-color: rgba(0,0,0,0.4);
+    border: 0.5px solid black;
+    padding: 10px;
 }
 
 a {

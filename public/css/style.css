@@ -20,6 +20,13 @@ h1 {
     text-shadow: 2px 2px black;
 }
 
+.email-result {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 125px;
+}
+
 #homepage {
     color: white;
     font-size: 35px;

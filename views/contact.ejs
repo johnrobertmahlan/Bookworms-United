@@ -1,0 +1,13 @@
+<%- include ('./partials/header') %>
+
+<form action="/contact" method="POST">
+    <label for="name">Name: </label>
+    <input type="text" name="name">
+    <label for="email">Email Address: </label>
+    <input type="email" name="email">
+    <label for="message">Message: </label>
+    <textarea name="message" placeholder="Your email here"></textarea>
+    <button type="submit">Send Email</button>
+</form>
+
+<%- include ('./partials/footer') %>

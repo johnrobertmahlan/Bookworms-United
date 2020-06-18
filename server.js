@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
+const nodemailer = require('nodemailer');
 const port = process.env.PORT || 3000;
 const indexRouter = require('./routes/index');
 const bookstoresRouter = require('./routes/bookstores');

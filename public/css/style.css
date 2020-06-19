@@ -106,7 +106,7 @@ th {
     border-bottom: 2px solid black;
 }
 
-#new-bookstore {
+#new-bookstore, #contact-form {
     background-color: rgba(0,0,0,0.4);
     border: 0.5px solid black;
     color: white;
@@ -164,6 +164,14 @@ input[type="submit"] {
     background-color: black;
     color: white;
     width: 150px;
+}
+
+input[type="text"] {
+    width: 300px;
+}
+
+input[type="email"] {
+    width: 300px;
 }
 
 footer {

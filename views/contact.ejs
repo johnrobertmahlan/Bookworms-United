@@ -1,13 +1,16 @@
 <%- include ('./partials/header') %>
 
-<form action="/contact" method="POST">
-    <label for="name">Name: </label>
-    <input type="text" name="name">
-    <label for="email">Email Address: </label>
-    <input type="email" name="email">
-    <label for="message">Message: </label>
-    <textarea name="message" placeholder="Your email here"></textarea>
-    <button type="submit">Send Email</button>
-</form>
+<div id="contact-form">
+    <p>Looking to get in touch with us? Feel free to send us an email with any thoughts or questions you might have about Bookworms United. We'd love to hear from you!</p>
+    <form action="/contact" method="POST">
+        <label for="name">Name: </label><br />
+        <input type="text" name="name"><br />
+        <label for="email">Email Address: </label><br />
+        <input type="email" name="email"><br />
+        <label for="message">Message: </label><br />
+        <textarea name="message" cols=50 rows=15 placeholder="Say Hi!"></textarea><br />
+        <button type="submit">Send Email</button>
+    </form>
+</div>
 
 <%- include ('./partials/footer') %>

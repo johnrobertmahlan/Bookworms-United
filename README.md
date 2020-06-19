@@ -48,6 +48,18 @@ The screenshots below were taken on June 18, 2020. The specific date is importan
 
 ![Edit Review Page](https://i.imgur.com/ycpe9r2.jpg)
 
+9. Here is a screenshot of the contact page. This is available to any user, and it allows them to send me an email directly.
+
+![Contact Form](https://i.imgur.com/DCrbDMW.jpg)
+
+10. Here is a screenshot of the success page that a user sees when they've successfully sent me an email. Ideally, this would simply be a popup after submission of the form, but for now, having a separate page that tells the user their email was sent successfully and invites them to navigate elsewhere on the site provides a smooth user experience.
+
+![Successful Email Page](https://i.imgur.com/HdN07Jo.jpg)
+
 ### How This Project Was Built
 
 This project is a full-stack web application built using three main languages: HTML, CSS, and JavaScript. The front end of the project primarily uses NodeJS and Express, but also employs some other frameworks like PassportJS for user authentication and Nodemailer for the email functionality. The back end of the project uses a MongoDB database, hosted by MongoDB Atlas, and the Mongoose framework for interaction with the databse.
+
+### Future Plans for this Project
+
+More on this soon. (Yes, I see the irony.)

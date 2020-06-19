@@ -62,4 +62,34 @@ This project is a full-stack web application built using three main languages: H
 
 ### Future Plans for this Project
 
-More on this soon. (Yes, I see the irony.)
+There are a number of ways that I could improve this project with additional work.
+
+The simplest improvement would be to allow users to upload photographs of bookstores. This might take two different directions. First, I initially thought that it would make the most sense to allow users to upload a single photograph upon creation of the bookstore in the database. This photo would presumably be something like an image of the store from the outside, which would then be displayed on the store's detail page.
+
+But it would also be nice to allow users to share photos of the store in their reviews. If, for example, a user really liked the coffee shop in the store, they might take a photo of it to give other users a sense of the atmosphere there.
+
+Either improvement (or both!) could be implemented using the Multer library for NodeJS.
+
+I would also like to improve the display on the bookstores index page itself. Right now the display is just a table containing key information about each bookstore. But if images of each store were uploaded per the above improvement, then something like a responsive slider might be a more attractive option. If the database were large enough, a responsive slider might be tedious for users. That, however, brings me to the main improvement I want to make to the app.
+
+The motivation behind the app stems from my own experience moving and traveling frequently. Finding good bookstores really is difficult, and the purpose of this app is to make that process easier. But right now, the app has a small database of stores in Denver, which is where I currently live. A future version of the app should have a more complex database. Right now, the app's data structure looks like this:
+
+![ERD](https://i.imgur.com/6ChmFgi.jpg)
+
+As you can see, there are three main data entities:
+
+1. Users
+2. Bookstores
+3. Reviews
+
+Users can create many bookstores, as well as write many reviews. Reviews are *embedded* in bookstores: when a user writes a review, that information is stored in the bookstore model in an array containing all the reviews of that bookstore. Reviews are related to users by their `createdBy` property, which is set to a user's `GoogleID` property. (This information could also be stored for bookstores, but it is not important to know who created the bookstore, since - once created - bookstores cannot be edited or deleted from the database.)
+
+A better version of the app would add a fourth main data entity:
+
+4. Cities
+
+On the landing page, instead of seeing a welcome message, the user would be prompted to select a city. Once that city has been selected, the app will function much as it does now, allowing the user to browse bookstores in that city and read or write reviews of those bookstores.
+
+I would have to think about the best way to implement this data structure, but it seems to me right now that the best strategy would be to embed bookstores in cities in much the same way that reviews are currently embedded in bookstores. Both relations are one:many, because just as each store can have multiple reviews (but a review is always of exactly one bookstore), each city can have multiple bookstores (but a bookstore is always in exactly one city). Each city would thus have a property called `Bookstores` that would consist of an array containing all the bookstores in that city.
+
+This would require restructuring the model for my app considerably, which is why I have not yet implemented this functionality, but a future version of the app would need to have this functionality to be viable.

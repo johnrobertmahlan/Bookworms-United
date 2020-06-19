@@ -4,7 +4,7 @@
 
 I love to read. But I think I might love going to bookstores even more. If you ask me about my favorite cities, for example, I will probably rank them based on the quality of their bookstores. 
 
-Unfortunately, *finding* good bookstores is difficult. Sometimes I hear about a great bookstore from other book lovers, and sometimes I'm lucky enough to stumble across one in my wanderings. But unlike restaurants, for example, which have dedicated apps to finding good ones in your area, there is no similar app for bookstores. There is nowhere for fellow book lovers to go to share their experiences with a particular bookstore.
+Unfortunately, *finding* good bookstores is difficult. Sometimes I hear about a great bookstore from other book lovers, and sometimes I'm lucky enough to stumble across one in my wanderings. But unlike with restaurants, for example, which have dedicated apps to finding good ones in your area, there is no similar app for bookstores. There is nowhere for fellow book lovers to go to share their experiences with a particular bookstore.
 
 Enter **Bookworms United**. The idea for the app is simple: collect some basic information about bookstores (name, location, popular genres, etc.), and allow users to post their opinions about those bookstores. The goal is to make it easier for book lovers to find new bookstores.
 
@@ -24,7 +24,7 @@ The screenshots below were taken on June 18, 2020. The specific date is importan
 
 ![About Bookworms United](https://i.imgur.com/josKmsT.jpg)
 
-3. Here is a screenshot of how the Bookstores index page looks when a user is *not* logged in. They can see everything that a logged-in user can see *except* for one thing: a button inviting them to add a bookstore to the list. Adding bookstores to the database is a functionality reserved only for users who are logged in. At the time of writing, the display is a simple table. As I discuss below, I eventually want to display bookstores in a more attractive way.
+3. Here is a screenshot of how the Bookstores index page looks when a user is *not* logged in. These users can see everything that a logged-in user can see *except* for one thing: a button inviting them to add a bookstore to the list. Adding bookstores to the database is a functionality reserved only for users who are logged in. At the time of writing, the display is a simple table. As I discuss below, I eventually want to display bookstores in a more attractive way.
 
 ![Bookstores Index (Not Logged In)](https://i.imgur.com/yGMdsG5.jpg)
 
@@ -58,7 +58,7 @@ The screenshots below were taken on June 18, 2020. The specific date is importan
 
 ### How This Project Was Built
 
-This project is a full-stack web application built using three main languages: HTML, CSS, and JavaScript. The front end of the project primarily uses NodeJS and Express, but also employs some other frameworks like PassportJS for user authentication and Nodemailer for the email functionality. The back end of the project uses a MongoDB database, hosted by MongoDB Atlas, and the Mongoose framework for interaction with the databse.
+This project is a full-stack web application built using three main languages: HTML, CSS, and JavaScript. The front end of the project primarily uses NodeJS and Express, but also employs some other frameworks like PassportJS for user authentication and Nodemailer for the email functionality. The back end of the project uses a MongoDB database, hosted by MongoDB Atlas, and MongooseJS for interaction with the database.
 
 ### Future Plans for this Project
 

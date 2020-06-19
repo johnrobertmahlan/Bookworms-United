@@ -58,7 +58,15 @@ The screenshots below were taken on June 18, 2020. The specific date is importan
 
 ### How This Project Was Built
 
-This project is a full-stack web application built using three main languages: HTML, CSS, and JavaScript. The front end of the project primarily uses NodeJS and Express, but also employs some other frameworks like PassportJS for user authentication and Nodemailer for the email functionality. The back end of the project uses a MongoDB database, hosted by MongoDB Atlas, and MongooseJS for interaction with the database.
+This project is a full-stack web application built using the following technologies:
+
+* HTML
+* CSS
+* JavaScript
+* NodeJS (including middleware such as PassportJS and Nodemailer, among others)
+* Express
+* MongoDB
+* GoogleFonts
 
 ### Future Plans for this Project
 

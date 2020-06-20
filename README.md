@@ -78,7 +78,7 @@ But it would also be nice to allow users to share photos of the store in their r
 
 Either improvement (or both!) could be implemented using the Multer library for NodeJS.
 
-I would also like to improve the display on the bookstores index page itself. Right now the display is just a table containing key information about each bookstore. But if images of each store were uploaded per the above improvement, then something like a responsive slider might be a more attractive option. If the database were large enough, a responsive slider might be tedious for users. That, however, brings me to the main improvement I want to make to the app.
+I would also like to improve the display on the bookstores index page itself. Right now the display is just a table containing key information about each bookstore. But if images of each store were uploaded per the above improvement, then something like a responsive slider might be a more attractive option. If the database were large enough, however, a responsive slider might be tedious for users. That brings me to the main improvement I want to make to the app.
 
 The motivation behind the app stems from my own experience moving and traveling frequently. Finding good bookstores really is difficult, and the purpose of this app is to make that process easier. But right now, the app has a small database of stores in Denver, which is where I currently live. A future version of the app should have a more complex database. Right now, the app's data structure looks like this:
 

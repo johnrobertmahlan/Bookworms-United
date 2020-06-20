@@ -32,6 +32,10 @@ footer {
 
 /* Style Page-Specific Box Elements */
 
+.bookstore-info {
+    width: 300px;
+}
+
 .email-result {
     color: white;
     font-size: 30px;
@@ -60,14 +64,10 @@ footer {
     font-size: 35px;
 }
 
-#bookstore-display {
-    margin: 0 auto;
-    width: 1000px;
-    text-align: center;
-};
-
-.bookstore-info {
-    width: 300px;
+#reviews {
+    text-align: justify;
+    width: 45%;
+    float: right;
 }
 
 #display-single-bookstore {
@@ -76,11 +76,12 @@ footer {
     float: left;
 }
 
-#reviews {
-    text-align: justify;
-    width: 45%;
-    float: right;
-}
+#bookstore-display {
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+};
+
 
 #display-one-review {
     margin-bottom: 20px;

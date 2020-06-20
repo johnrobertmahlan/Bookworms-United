@@ -1,3 +1,13 @@
+/* Style Common Box Elements */
+
+body {
+    background-image: url("../images/blur-book-stack-books-bookshelves-590493.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -10,15 +20,17 @@ nav {
 main {
     margin-top: 100px;
     flex-grow: 1;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
 }
 
-h1 {
+footer {
+    display: flex;
+    justify-content: center;
+    height: 50px;
     color: white;
-    text-shadow: 2px 2px black;
+    font-size: 30px;
 }
+
+/* Style Page-Specific Box Elements */
 
 .email-result {
     color: white;
@@ -34,29 +46,11 @@ h1 {
     text-align: center;
 }
 
-nav>a {
-    text-decoration: none;
-}
-
-body {
-    background-image: url("../images/blur-book-stack-books-bookshelves-590493.jpg");
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-#site-name {
-    font-family: 'Great Vibes', cursive;
-    font-size: 50px;
-}
-
-#greeting {
+#new-bookstore, #contact-form {
     margin: 0 auto;
-    width: 600px;
-    text-align: justify;
-    font-size: 35px;
-    color: white;
+    width: 50%;
+    text-align: center;
+    font-size: 150%;
 }
 
 #about {
@@ -64,35 +58,40 @@ body {
     width: 600px;
     text-align: justify;
     font-size: 35px;
-    color: white;
-    background-color: rgba(0,0,0,0.4);
-    border: 0.5px solid black;
-    padding: 10px;
-}
-
-a {
-    color: white;
-}
-
-a:visited {
-    color: white;
-}
-
-ul {
-    list-style-type: none;
 }
 
 #bookstore-display {
     margin: 0 auto;
     width: 1000px;
-    color: white;
-    background-color: rgba(0,0,0,0.4);
-    border: 0.5px solid black;
     text-align: center;
 };
 
+.bookstore-info {
+    width: 300px;
+}
+
+#display-single-bookstore {
+    text-align: center;
+    width: 45%;
+    float: left;
+}
+
+#reviews {
+    text-align: justify;
+    width: 45%;
+    float: right;
+}
+
+#display-one-review {
+    margin-bottom: 20px;
+}
+
+#update-review-form {
+    margin-top: 20px;
+}
+
 table {
-    width: 800px;
+    width: 1000px;
 }
 
 th, td {
@@ -106,78 +105,44 @@ th {
     border-bottom: 2px solid black;
 }
 
-#new-bookstore, #contact-form {
-    background-color: rgba(0,0,0,0.4);
-    border: 0.5px solid black;
-    color: white;
-    margin: 0 auto;
-    width: 50%;
-    text-align: center;
-    font-size: 150%;
-}
-
-.bookstore-info {
-    width: 300px;
-}
-
-#display-single-bookstore{
+#about, #bookstore-display, #new-bookstore, #contact-form, #display-single-bookstore, #reviews, #display-one-review, #update-review-form {
     background-color: rgba(0,0,0,0.4);
     color: white;
     border: 0.5px solid black;
     padding: 10px;
-    width: 45%;
-    float: left;
 }
 
-#reviews {
-    background-color: rgba(0,0,0,0.4);
+
+/* Style text elements */
+
+nav>a {
+    text-decoration: none;
+}
+
+h1 {
     color: white;
-    border: 0.5px solid black;
-    padding: 10px;
-    width: 45%;
-    float: right;
+    text-shadow: 2px 2px black;
 }
 
-#display-one-review {
-    background-color: rgba(0,0,0,0.4);
+#site-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+}
+
+a, a:visited {
     color: white;
-    border: 0.5px solid black;
-    padding: 10px;
-    margin-bottom: 20px;
 }
 
-#update-review-form {
-    background-color: rgba(0,0,0,0.4);
-    color: white;
-    border: 0.5px solid black;
-    padding: 10px;
-    margin-top: 20px;
+ul {
+    list-style-type: none;
 }
 
-button {
+button, input[type="submit"] {
     background-color: black;
     color: white;
     width: 150px;
 }
 
-input[type="submit"] {
-    background-color: black;
-    color: white;
-    width: 150px;
-}
-
-input[type="text"] {
+input[type="text"], input[type="email"] {
     width: 300px;
-}
-
-input[type="email"] {
-    width: 300px;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    color: white;
-    font-size: 30px;
 }

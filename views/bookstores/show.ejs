@@ -1,11 +1,14 @@
 <%- include('../partials/header') %>
 
+<!--Show the user the details about the bookstore-->
 <div id="display-single-bookstore">
     <h1><%= bookstore.name %></h1>
     <p><strong>Address:</strong> <%= bookstore.address %></p>
     <p><strong>Popular Genre(s):</strong> <%= bookstore.genres.join(", ") %></p>
     <p><strong>Website:</strong> <a href="<%= bookstore.website %>"><%= bookstore.name %></a></p>
     <br />
+
+    <!--If the user is logged in, then display a form inviting them to write a review of the bookstore-->
     <% if(user) { %>
         <h3>Been Here Before? Tell Us What You Thought!</h3>
         <form action="/bookstores/<%= bookstore._id %>/reviews" method="POST">
@@ -27,6 +30,7 @@
     <% }; %>
     </div>
     
+    <!--Display existing reviews of this bookstore to all users-->
     <aside id="reviews">
             <% if(bookstore.reviews.length) { %>
                 <h2>What Your Fellow Bookworms Had to Say About <%= bookstore.name %>:</h2>
@@ -53,10 +57,16 @@
                             </form>
                         </div>
                         <% }; %>    
-                    <% }); %>   
+                    <% }); %>  
+                    
+            <!--If there are no reviews written yet, let the user know-->        
             <% } else { %>
+
+                <!--If the user is already logged in, invite them to write the first review-->
                 <% if(user) { %>
                     <h3>Sorry, nobody has reviewed this bookstore yet. You could be the first!</h3>
+                    
+                <!--If the user is not yet logged in, invite them to log in and write the first review-->    
                 <% } else { %>
                     <h3>Sorry, nobody has reviewed this bookstore yet. <a href="/auth/google">Log in</a> to be the first!</h3>
                 <% }; %>

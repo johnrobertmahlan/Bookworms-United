@@ -1,6 +1,10 @@
+// Require modules
+
 const router = require('express').Router();
 const passport = require('passport');
 const nodemailer = require('nodemailer');
+
+// Identify routes (Future: Build an indexCtrl to handle these functions)
 
 router.get('/', function(req, res) {
     res.render('index', {
@@ -39,11 +43,13 @@ router.post('/contact', function(req, res) {
         text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
     }
 
-    // Attempt to send the email
+    // Send the email
     transport.sendMail(mailOpts, function(err, response) {
+        // If sending fails, send user to a page informing them of this
         if(err) {
             res.render('failure', {user: req.user})
         }
+        // If sending succeeds, send user to a page informing them of this
         else {
             res.render('success', {user: req.user})
         }
@@ -67,5 +73,7 @@ router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
 });
+
+// Export router
 
 module.exports = router;

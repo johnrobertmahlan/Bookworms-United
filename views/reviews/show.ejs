@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+<!--Display the original review to the user for reference-->
 <div id="display-one-review">
     <h2>Your Original Review:</h1>
     
@@ -7,6 +8,7 @@
             <p><%= review.rating %> Star(s) - <%= review.content %></p>       
 </div>
 
+<!--Display a form allowing the user to update their review-->
 <div id="update-review-form">
     <h3>Now's your chance to tell us what you <em>really</em> think:</h3>
         <form action="/reviews/<%= review._id %>?_method=PUT" method="POST">
@@ -20,6 +22,8 @@
             </select>
             <button type="submit">Submit Changes</button>
         </form><br />
+
+        <!--Give the viewer the option to delete their review entirely instead of just editing it-->
         <p>Or maybe you'd prefer not to say anything at all? Delete your review: 
             <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
                 <button type="submit">Delete Review</button>

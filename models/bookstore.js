@@ -1,8 +1,12 @@
+// Require modules
+
 const mongoose = require('mongoose');
+
+// Construct review schema
 
 const reviewSchema = new mongoose.Schema({
     createdBy: {
-        type: mongoose.Schema.Types.ObjectId, ref: "User",
+        type: mongoose.Schema.Types.ObjectId, ref: "User", // This property is created by referencing the GoogleId property of the user
     },
     content: String,
     rating: {
@@ -11,6 +15,8 @@ const reviewSchema = new mongoose.Schema({
         max: 5
     }}, { timestamps: true }
 );
+
+// Construct bookstore schema
 
 const bookstoreSchema = new mongoose.Schema({
     name: {
@@ -21,10 +27,11 @@ const bookstoreSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    //picture: String,
     genres: [String],
     website: String,
-    reviews: [reviewSchema]
+    reviews: [reviewSchema] // Reviews will be embedded here in an array
 })
+
+// Export bookstore model
 
 module.exports = mongoose.model('Bookstore', bookstoreSchema);

@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+<!--Display a table with basic information about all bookstores in the database-->
 <div id="bookstore-display">
     <table>
         <thead>
@@ -23,6 +24,8 @@
             <% }); %>
         </tbody>
     </table>
+
+    <!--If the user is logged in, display a button inviting them to add a new bookstore to the database-->
     <% if(user) { %>
         <form id="add-bookstore" action="/bookstores/new" method="GET">
             <p>Found a great bookstore? <button type="submit">Add it here!</button></p>

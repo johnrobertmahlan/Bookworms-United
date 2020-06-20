@@ -65,7 +65,7 @@ This project is a full-stack web application built using the following technolog
 * JavaScript
 * NodeJS (including middleware such as PassportJS and Nodemailer, among others)
 * Express
-* MongoDB
+* MongoDB (database hosted on MongoDB Atlas)
 * GoogleFonts
 
 ### Future Plans for this Project
